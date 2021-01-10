@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+Options -Multiviews
+ReWriteEngine On
+ReWriteBase /traversy/public
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+ReWriteRule ^(.+)$ index.php?url=$1 [QSA,L]
+
+
+</IfModule>
